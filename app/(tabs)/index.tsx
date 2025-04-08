@@ -9,7 +9,9 @@ const HomeScreen = () => {
   return (
     <N.View style={styles.mainBox}>
       <N.Text style={styles.h1}>Now we have a clean slate</N.Text>
-      <N.Button title="tap me" />
+      <N.Text style={styles.btn} onPress={() => console.log("tapped")}>
+        tap me
+      </N.Text>
     </N.View>
   );
 };
@@ -26,6 +28,14 @@ const styles = N.StyleSheet.create({
     color: "#2F4F",
     textAlign: "center",
     marginBottom: 16,
+  },
+  btn: {
+    borderWidth: 4,
+    borderColor: "red",
+    padding: 10,
+    fontSize: 16,
+    color: "#fff",
+    backgroundColor: "blue",
   },
 });
 
