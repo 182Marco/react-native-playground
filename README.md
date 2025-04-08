@@ -1,7 +1,5 @@
 # Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
 ## Get started
 
 1. Install dependencies
@@ -35,16 +33,38 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+# Playground React Native
 
-To learn more about developing your project with Expo, look at the following resources:
+Welcome to the **Playground React Native** repository! This project was created as a learning environment during my journey through a React Native course. The main goal of this repository is to explore and experiment with React Native features while gaining hands-on experience with the framework.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Description
 
-## Join the community
+This project is a "playground" where I can practice and test key concepts of React Native, such as navigation, interacting with APIs, using native components, integrating third-party libraries, and much more.
 
-Join our community of developers creating universal apps.
+The code in this repository reflects the exercises and practical examples from the course, with the intent to provide an active learning context where I can experiment and see immediate results.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Objectives
+
+- Learn how to build mobile applications using **React Native**.
+- Experiment with core React Native features, including:
+  - Navigation between screens
+  - State management with **React** (Hooks, Context API)
+  - Interacting with device features through native components (camera, geolocation, etc.)
+  - Using external libraries (e.g., Axios for API calls)
+- Create a safe test environment to try out new concepts and solutions without affecting a final application.
+
+## Project Structure
+
+- **App.js**: The main entry point where the app starts. It contains the basic layout and some example functionalities.
+- **/components**: Folder containing reusable components used across various screens.
+- **/screens**: Folder with the main screens of the app.
+- **/assets**: Images and static resources used within the app.
+- **/services**: Functions to interact with external APIs or handle complex logic (e.g., REST calls).
+
+## How to Get Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/playground-react-native.git
+   ```
