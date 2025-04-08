@@ -9,6 +9,7 @@ const HomeScreen = () => {
   return (
     <N.View style={styles.mainBox}>
       <N.Text style={styles.h1}>Now we have a clean slate</N.Text>
+      <N.Button title="tap me" />
     </N.View>
   );
 };
