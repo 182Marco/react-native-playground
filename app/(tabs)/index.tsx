@@ -1,42 +1,30 @@
-/* 
-import { HelloWave } from "@/components/HelloWave";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView"; */
-import * as N from "react-native";
+import * as N from 'react-native';
+import { useHomeScreen } from './homeScreen.hook';
+import { styles } from './homeScreen.styles';
 
 const HomeScreen = () => {
+  const h = useHomeScreen();
   return (
     <N.View style={styles.mainBox}>
-      <N.Text style={styles.h1}>Now we have a clean slate</N.Text>
-      <N.Text style={styles.btn} onPress={() => console.log("tapped")}>
-        tap me
-      </N.Text>
+      <N.View style={styles.mainBox}>
+        <N.TextInput
+          style={styles.input}
+          placeholder="Your course goal"
+          value={h.goal}
+          onChangeText={h.setGoal}
+        />
+        <N.Text style={styles.sameStringEr}>{h.sameStringEr}</N.Text>
+        <N.Button title="Tap to add" onPress={() => h.addSetGoals(h.goal)} />
+      </N.View>
+      <N.View style={styles.goalsBox}>
+        {h.goals.map((g, i) => (
+          <N.Text key={i} style={styles.goalLi}>
+            {g}
+          </N.Text>
+        ))}
+      </N.View>
     </N.View>
   );
 };
-
-const styles = N.StyleSheet.create({
-  mainBox: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  h1: {
-    fontSize: 32,
-    fontWeight: "bold",
-    color: "#2F4F",
-    textAlign: "center",
-    marginBottom: 16,
-  },
-  btn: {
-    borderWidth: 4,
-    borderColor: "red",
-    padding: 10,
-    fontSize: 16,
-    color: "#fff",
-    backgroundColor: "blue",
-  },
-});
 
 export default HomeScreen;
