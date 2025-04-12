@@ -1,0 +1,1 @@
+export { compareTexts } from './compareTexts';
