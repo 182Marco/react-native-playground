@@ -1,0 +1,1 @@
+export { getNormalized } from './normalize';
