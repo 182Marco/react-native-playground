@@ -1,3 +1,3 @@
-type ICompareTexts = (str1: string, str2: string) => boolean;
+type ICompareTexts = (...str: string[]) => boolean;
 
 export { ICompareTexts };
