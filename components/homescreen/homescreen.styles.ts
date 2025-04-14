@@ -31,7 +31,7 @@ const S = N.StyleSheet.create({
     borderRadius: 12,
   },
   input: {
-    width: '100%',
+    width: 310,
     padding: 16,
     fontSize: 18,
     borderRadius: 10,
