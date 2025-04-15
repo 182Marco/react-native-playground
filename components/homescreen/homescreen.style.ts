@@ -66,13 +66,6 @@ const S = N.StyleSheet.create({
   goalsBoxTextContainer: {
     marginTop: 20,
   },
-  goalLi: {
-    fontSize: 16,
-    paddingVertical: 6,
-    color: GolbalS.colors.goalTextColor,
-    borderBottomColor: GolbalS.colors.goalBorderColor,
-    borderBottomWidth: 1,
-  },
 });
 
 export { S };
