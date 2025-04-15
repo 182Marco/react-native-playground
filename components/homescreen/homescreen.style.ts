@@ -29,6 +29,7 @@ const S = N.StyleSheet.create({
     padding: 16,
     backgroundColor: GolbalS.colors.panel,
     borderRadius: 12,
+    maxHeight: 250,
   },
   input: {
     width: 310,
@@ -57,6 +58,10 @@ const S = N.StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 5,
+    minHeight: 30,
+  },
+  btnContainer: {
+    flex: 4,
   },
   goalsBoxTextContainer: {
     marginTop: 20,
