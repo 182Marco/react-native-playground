@@ -8,6 +8,14 @@ const colors: Record<string, string> = {
   buttonColor: '#3B82F6',
   goalTextColor: '#E2E8F0',
   goalBorderColor: '#475569',
+  checked: '#00FF00',
+  rippleColor: '#dddddddd',
 };
 
-export { colors };
+const android_ripple = {
+  android_ripple: {
+    color: colors.rippleColor,
+  },
+};
+
+export { colors, android_ripple };
