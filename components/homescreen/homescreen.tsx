@@ -1,6 +1,7 @@
 import * as N from 'react-native';
+import * as C from '../../components';
+import { S } from './homescreen.style';
 import { useHomeScreen } from './homeScreen.hook';
-import { S } from './homeScreen.styles';
 
 const HomeScreen = () => {
   const h = useHomeScreen();
@@ -10,23 +11,18 @@ const HomeScreen = () => {
         <N.Text style={S.clearText} onPress={() => h.setGoals([])}>
           Clear
         </N.Text>
-      </N.View>
-      <N.View style={S.mainBox}>
-        <N.TextInput
-          style={S.input}
-          placeholder="Your course goal"
-          value={h.goal}
-          onChangeText={h.setGoal}
+        <C.GoalInput
+          goal={h.goal}
+          setGoal={h.setGoal}
+          sameStringEr={h.er}
+          addSetGoals={h.addSetGoals}
         />
-        <N.Text style={S.sameStringEr}>{h.sameStringEr}</N.Text>
-        <N.Button title="Tap to add" onPress={() => h.addSetGoals(h.goal)} />
-      </N.View>
-      <N.View style={S.goalsBox}>
-        {h.goals.map((g, i) => (
-          <N.Text key={i} style={S.goalLi}>
-            {g}
-          </N.Text>
-        ))}
+        <N.FlatList
+          data={h.goals}
+          style={S.goalsBox}
+          renderItem={g => <C.GoalItem goal={g.item} {...h.handleGoal} />}
+          alwaysBounceVertical={false}
+        />
       </N.View>
     </N.View>
   );
