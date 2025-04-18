@@ -1,7 +1,7 @@
 import * as N from 'react-native';
 import * as GolbalS from '../../../styles';
 
-const S = N.StyleSheet.create({
+const s = N.StyleSheet.create({
   checkText: {
     color: GolbalS.colors.checked,
     width: 20,
@@ -13,6 +13,10 @@ const S = N.StyleSheet.create({
     borderBottomColor: GolbalS.colors.goalBorderColor,
     borderBottomWidth: 1,
     flexGrow: 1,
+  },
+  goalLiBoxPressed: {
+    borderColor: GolbalS.colors.goalBorderColor,
+    borderWidth: 1,
   },
   goalLi: {
     fontSize: 16,
@@ -36,4 +40,6 @@ const S = N.StyleSheet.create({
   },
 });
 
-export { S };
+const pressedGoalLi = { ...s.goalLiBoxPressed, ...s.goalLiBox };
+
+export { s, pressedGoalLi };
