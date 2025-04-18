@@ -1,8 +1,9 @@
 import * as N from 'react-native';
+import * as C from '../../../components';
 import { S } from './goalInput.style';
-import { IGoalInput } from './goalInput.models';
 import * as Styles from '../../../styles';
-import { texts } from '../texts';
+import { texts } from '../../../texts';
+import { IGoalInput } from './goalInput.models';
 
 const GoalInput: IGoalInput = p => (
   <N.View style={S.mainBox}>
@@ -14,7 +15,10 @@ const GoalInput: IGoalInput = p => (
         value={p.goal}
         onChangeText={p.setGoal}
       />
-      <N.Button title="add" onPress={() => p.addSetGoals(p.goal)} />
+      <C.Btn
+        text={texts.inputGoalBtnText}
+        onPress={() => p.addSetGoals(p.goal)}
+      />
     </N.View>
     <N.Text style={S.sameStringEr}>{p.sameStringEr}</N.Text>
   </N.View>
