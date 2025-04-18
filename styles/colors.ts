@@ -15,6 +15,7 @@ const colors: Record<string, string> = {
 const android_ripple = {
   android_ripple: {
     color: colors.rippleColor,
+    borderless: false,
   },
 };
 
