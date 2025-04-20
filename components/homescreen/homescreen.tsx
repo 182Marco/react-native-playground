@@ -1,16 +1,25 @@
 import * as N from 'react-native';
 import * as C from '../../components';
+import { texts } from '../../texts';
 import { S } from './homescreen.style';
+import * as Gs from '../../styles';
 import { useHomeScreen } from './homeScreen.hook';
 
 const HomeScreen = () => {
   const h = useHomeScreen();
   return (
     <N.View style={S.mainBox}>
-      <N.View style={S.clearTextContainer}>
-        <N.Text style={S.clearText} onPress={() => h.setGoals([])}>
-          Clear
-        </N.Text>
+      <N.View style={S.clearTextBox}>
+        <N.View style={S.btnBox}>
+          <C.Btn
+            text={texts.clearBtnText}
+            BgColor="transparent"
+            color={Gs.colors.errorColor}
+            onPress={() => h.setGoals([])}
+            paddingHorizontal="0"
+            paddingVertical="0"
+          />
+        </N.View>
         <C.GoalInput
           goal={h.goal}
           setGoal={h.setGoal}
