@@ -5,7 +5,8 @@ interface BtnAtomProps {
   onPress: (e: GestureResponderEvent) => void;
   BgColor?: string;
   color?: string;
-  padding?: string;
+  paddingVertical?: string;
+  paddingHorizontal?: string;
 }
 
 type IBtn = React.FC<BtnAtomProps>;
