@@ -8,13 +8,10 @@ const S = StyleSheet.create({
     overflow: 'hidden',
   },
   btn: {
-    paddingVertical: 10,
-    paddingHorizontal: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },
   btnText: {
-    color: Gs.colors.textColor,
     fontSize: 16,
     fontWeight: 700,
   },
@@ -27,9 +24,8 @@ const btnBoxStyle = (p: IStyleProps) => ({
 
 const btnStyle = (p: IStyleProps) => ({
   ...S.btn,
-  paddingVertical: p.padding ? 0 : 10,
-  paddingHorizontal: p.padding ? 0 : 20,
-  padding: p.padding ? Number(p.padding) : 0,
+  paddingVertical: Number(p.paddingVertical || 10),
+  paddingHorizontal: Number(p.paddingHorizontal || 20),
 });
 
 const btnTextStyle = (p: IStyleProps) => ({
