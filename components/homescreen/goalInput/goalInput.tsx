@@ -7,20 +7,29 @@ import { IGoalInput } from './goalInput.models';
 
 const GoalInput: IGoalInput = p => (
   <N.View style={S.mainBox}>
-    <N.View style={S.inputRow}>
-      <N.TextInput
-        style={S.input}
-        placeholder={texts.inputPlaceHolder}
-        placeholderTextColor={Styles.colors.textColor}
-        value={p.goal}
-        onChangeText={p.setGoal}
-      />
-      <C.Btn
-        text={texts.inputGoalBtnText}
-        onPress={() => p.addSetGoals(p.goal)}
-      />
-    </N.View>
-    <N.Text style={S.sameStringEr}>{p.sameStringEr}</N.Text>
+    <N.Modal visible={p.isOpenModal} animationType="slide">
+      <N.View style={S.inputRow}>
+        <N.TextInput
+          style={S.input}
+          placeholder={texts.inputPlaceHolder}
+          placeholderTextColor={Styles.colors.textColor}
+          value={p.goal}
+          onChangeText={p.setGoal}
+        />
+        <C.Btn
+          text={texts.inputGoalBtnText}
+          onPress={() => {
+            p.addSetGoals(p.goal);
+            p.setIsOpenModal(false);
+          }}
+        />
+        <C.Btn
+          text={texts.goBackToListBtnText}
+          onPress={() => p.setIsOpenModal(false)}
+        />
+      </N.View>
+      <N.Text style={S.sameStringEr}>{p.sameStringEr}</N.Text>
+    </N.Modal>
   </N.View>
 );
 
