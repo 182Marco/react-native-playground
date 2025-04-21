@@ -8,13 +8,11 @@ const S = StyleSheet.create({
     backgroundColor: GolbalS.colors.panel,
     borderRadius: 12,
   },
-
   inputRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8, // solo se usi React Native 0.71+ altrimenti usa marginRight
+    gap: 8,
   },
-
   input: {
     flex: 1,
     backgroundColor: GolbalS.colors.inputBackground,
@@ -26,7 +24,6 @@ const S = StyleSheet.create({
     color: GolbalS.colors.textColor,
     marginRight: 8,
   },
-
   sameStringEr: {
     color: GolbalS.colors.errorColor,
     marginTop: 8,
