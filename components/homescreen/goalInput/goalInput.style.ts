@@ -2,19 +2,23 @@ import { StyleSheet } from 'react-native';
 import * as GolbalS from '../../../styles';
 
 const S = StyleSheet.create({
-  mainBox: {
-    width: '100%',
-    padding: 16,
+  modalBox: {
+    flex: 1,
     backgroundColor: GolbalS.colors.panel,
-    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 15,
   },
   inputRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
+    gap: 16,
+    padding: 10,
   },
   input: {
-    flex: 1,
+    height: 40,
+    width: '100%',
     backgroundColor: GolbalS.colors.inputBackground,
     borderColor: GolbalS.colors.inputBorder,
     borderWidth: 1,
