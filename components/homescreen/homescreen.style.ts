@@ -9,19 +9,9 @@ const S = StyleSheet.create({
   mainBox: {
     flex: 1,
     backgroundColor: GolbalS.colors.background,
-    padding: 16,
-  },
-  clearTextBox: {
-    marginTop: 10,
-    flex: 1,
-    backgroundColor: GolbalS.colors.panel,
-    borderRadius: 12,
-    padding: 16,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.15,
-    shadowRadius: 4,
-    elevation: 4,
+    paddingTop: 50,
+    paddingBottom: 30,
+    paddingHorizontal: 25,
   },
   clearText: {
     alignSelf: 'flex-end',
@@ -30,7 +20,7 @@ const S = StyleSheet.create({
     marginBottom: 12,
   },
   goalsBox: {
-    marginTop: 16,
+    marginVertical: 16,
     flexGrow: 1,
     backgroundColor: GolbalS.colors.inputBackground,
     borderRadius: 10,
