@@ -26,7 +26,8 @@ const useHomeScreen = () => {
     setGoals(pv => {
       if (goal === '') return setEr(texts.noStrEr()), pv;
       if (isPresent(pv, goal)) return setEr(texts.sameStrEr()), pv;
-      er && setEr('');
+      if (er) setEr('');
+      setIsOpenModal(false);
       return [...pv, new Goal(goal)];
     });
   };
@@ -46,6 +47,7 @@ const useHomeScreen = () => {
     goal,
     handleGoal: { remove, check },
     isOpenModal,
+    setEr,
     setGoal,
     setGoals,
     setIsOpenModal,
