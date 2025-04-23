@@ -9,6 +9,10 @@ const S = StyleSheet.create({
     alignItems: 'center',
     padding: 15,
   },
+  img: {
+    width: 100,
+    height: 100,
+  },
   inputRow: {
     flexDirection: 'row',
     alignItems: 'center',
