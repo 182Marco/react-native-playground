@@ -9,7 +9,10 @@ import { S } from './goalInput.style';
 const GoalInput: IGoalInput = p => (
   <N.Modal visible={p.isOpenModal} animationType="slide">
     <N.View style={S.modalBox}>
-      <N.Image source={require('../../../assets/images/check.avif')} />
+      <N.Image
+        style={S.img}
+        source={require('../../../assets/images/check.avif')}
+      />
       <N.TextInput
         style={S.input}
         placeholder={texts.inputPlaceHolder}
