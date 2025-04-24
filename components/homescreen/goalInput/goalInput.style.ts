@@ -10,15 +10,17 @@ const S = StyleSheet.create({
     padding: 15,
   },
   img: {
-    width: 100,
-    height: 100,
+    borderColor: 'red',
+    width: 70,
+    height: 70,
+    marginBottom: 15,
   },
   inputRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 16,
-    padding: 10,
+    padding: 15,
   },
   input: {
     height: 40,
