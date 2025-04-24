@@ -11,7 +11,7 @@ const GoalInput: IGoalInput = p => (
     <N.View style={S.modalBox}>
       <N.Image
         style={S.img}
-        source={require('../../../assets/images/check.avif')}
+        source={require('../../../assets/images/check2.png')}
       />
       <N.TextInput
         style={S.input}
