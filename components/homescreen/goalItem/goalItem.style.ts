@@ -2,9 +2,10 @@ import * as N from 'react-native';
 import * as GolbalS from '../../../styles';
 
 const s = N.StyleSheet.create({
-  checkText: {
-    color: GolbalS.colors.checked,
-    width: 20,
+  goalItemWrap: {
+    borderRadius: 20,
+    overflow: 'hidden',
+    marginBottom: 10,
   },
   goalLiBox: {
     flexDirection: 'row',
@@ -13,14 +14,17 @@ const s = N.StyleSheet.create({
     borderBottomColor: GolbalS.colors.goalBorderColor,
     borderBottomWidth: 1,
     flexGrow: 1,
+    paddingLeft: 6,
   },
   goalLiBoxPressed: {
     borderColor: GolbalS.colors.goalBorderColor,
     borderWidth: 1,
+    borderRadius: 20,
+    overflow: 'hidden',
   },
   goalLi: {
     fontSize: 16,
-    paddingVertical: 6,
+    paddingVertical: 4,
     color: GolbalS.colors.goalTextColor,
     alignSelf: 'stretch',
   },
@@ -28,6 +32,18 @@ const s = N.StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  squareForCheck: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderRadius: 4,
+    borderColor: GolbalS.colors.inputBorder,
+    width: 20,
+    height: 20,
+    marginRight: 10,
+  },
+  checkSimbol: { color: 'green', fontSize: 10 },
   xBox: {
     height: '100%',
     paddingHorizontal: 10,
